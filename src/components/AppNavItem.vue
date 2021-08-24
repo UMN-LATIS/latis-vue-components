@@ -21,12 +21,6 @@
 .app-nav__item a:hover {
   background: white;
   color: var(--maroon);
-  border-bottom: 0.25rem solid white;
-}
-
-.app-nav__item--is-active a,
-.app-nav__item--is-active a:hover {
-  border-bottom: 0.25rem solid var(--maroon);
 }
 
 .app-nav__item:hover .app-nav__sub-nav {
@@ -38,6 +32,9 @@
 }
 
 @media (min-width: 36rem) {
+  /* .app-nav__item:hover { */
+  /* border-bottom: 0.25rem solid white; */
+  /* } */
   .app-nav__item:hover .app-nav__sub-nav {
     position: absolute;
     top: 100%;
@@ -46,6 +43,10 @@
     border: 1px solid var(--gray-light);
     border-radius: 0.25rem;
     min-width: 10rem;
+  }
+  .app-nav__item--is-active a,
+  .app-nav__item--is-active a:hover {
+    border-bottom: 0.25rem solid var(--maroon);
   }
 }
 </style>
