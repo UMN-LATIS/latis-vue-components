@@ -4,7 +4,7 @@ import umnWordmark from "../assets/umn-tc-d2d.svg";
 import mLogo from "../assets/m-logo.svg";
 </script>
 
-<style scoped>
+<style>
 .umn-header {
   background: var(--maroon);
   padding: 1rem 0;

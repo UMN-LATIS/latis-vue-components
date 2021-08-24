@@ -12,7 +12,7 @@ const props = defineProps({
 });
 </script>
 
-<style scoped>
+<style>
 .app-nav__sub-nav {
   margin: 0;
   padding: 0;
