@@ -36,9 +36,15 @@ import mLogo from "../assets/m-logo.svg";
   margin-right: 1rem;
 }
 
+.umn-header__links li {
+  margin: 0;
+  padding: 0;
+}
+
 .umn-header__links a {
   padding: 0.5rem;
   color: hsla(0, 100%, 100%, 0.75);
+  display: inline-block;
 }
 
 .umn-header__links a {
