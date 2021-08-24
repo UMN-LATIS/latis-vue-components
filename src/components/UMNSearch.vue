@@ -33,7 +33,7 @@
 import { reactive, computed } from "vue";
 
 const state = reactive({
-  isClosed: false,
+  isClosed: true,
   query: "",
 });
 
@@ -61,16 +61,31 @@ const searchFormClasses = computed(() => ({
 .umn-search {
   display: flex;
   justify-content: flex-end;
-  color: var(--gold);
+  color: white;
+  font-size: 0.8rem;
 }
 .umn-search__input-group {
   position: relative;
+  max-width: 10rem;
 }
 
 .umn-search__label {
   position: absolute;
   left: 0.33em;
-  bottom: 0.5em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.umn-search__toggle-search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: none;
+  border: none;
+  color: white;
 }
 
 .umn-search__input {
@@ -78,8 +93,10 @@ const searchFormClasses = computed(() => ({
   padding-left: 2rem;
   background: none;
   border: none;
-  border-bottom: 0.125rem solid var(--gold);
+  border-bottom: 0.125rem solid white;
   border-radius: 0;
+  color: white;
+  max-width: 100%;
 }
 /* .umn-search__button {
   border-radius: 0 0.25rem 0.25rem 0;
@@ -90,5 +107,14 @@ const searchFormClasses = computed(() => ({
 
 .umn-search__form--is-closed {
   display: none;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: hsla(0, 100%, 100%, 0.5);
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: hsla(0, 100%, 100%, 0.5);
 }
 </style>

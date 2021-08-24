@@ -35,29 +35,6 @@
   box-sizing: border-box;
 }
 
-.component {
-  background: #ccc;
-  position: relative;
-}
-
-.component__name {
-  margin: 0;
-  padding: 0.5em;
-  font-size: 0.75rem;
-  font-family: monospace;
-  position: absolute;
-  top: -1.75rem;
-  right: 0;
-  background: hsla(0, 100%, 100%, 0.5);
-  color: #999;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
   line-height: 1.4;
