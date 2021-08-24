@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+:root {
+  --gold: #fc3;
+  --gold-light: #ffde7a;
+  --gold-header: #ffd75f;
+  --gold-dark: #ffb71e;
+
+  --maroon: #7a0019;
+  --maroon-light: #900021;
+  --maroon-dark: #4d0010;
+  --maroon-darker: #5b0013;
+
+  --green: #58a616;
+  --orange: #e37222;
+  --blue: #00759a;
+
+  --black: #000;
+  --gray-darker: #333;
+  --gray-dark: #5a5a5a;
+  /* --stormy: #404d5b; */
+  --gray-medium: #777677;
+  /* --sf-shadow: #8a8a8a; */
+  --gray-light: #d5d6d2;
+  --gray: var(--gray-light);
+  /* --very-light: #eee; */
+  --gray-lighter: #f0efee;
+  /* --off-white: #f9f7f6; */
+  --white: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.component {
+  background: #ccc;
+  position: relative;
+}
+
+.component__name {
+  margin: 0;
+  padding: 0.5em;
+  font-size: 0.75rem;
+  font-family: monospace;
+  position: absolute;
+  top: -1.75rem;
+  right: 0;
+  background: hsla(0, 100%, 100%, 0.5);
+  color: #999;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+}
+
+a {
+  color: var(--maroon);
+  text-decoration: none;
+}
+
+button,
+input[type="submit"] {
+  padding: 0.5em 1em;
+  background: var(--gold);
+  border: 0.125rem solid var(--gold-dark);
+  box-shadow: 0;
+  border-radius: 0.25rem;
+}
+
+button:hover {
+  background: var(--gold-dark);
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 0.125rem solid var(--gray-light);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.container {
+  max-width: 50rem;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* see: https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/ */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
