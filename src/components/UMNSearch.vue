@@ -24,7 +24,7 @@
       class="umn-search__toggle-search-form"
       @click="handleToggleFormClosed"
     >
-      <i class="fa fa-search" :class="toggleIconClass"></i>
+      <i class="fa fa-search"></i>
     </button>
   </div>
 </template>
