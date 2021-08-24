@@ -12,7 +12,11 @@ export const parameters = {
     },
   },
   backgrounds: {
-    default: "maroon",
-    values: [{ name: "maroon", value: "#7a0019" }],
+    default: "light",
+    values: [
+      { name: "light", value: "#fff" },
+      { name: "dark", value: "#222" },
+      { name: "maroon", value: "#7a0019" },
+    ],
   },
 };
