@@ -24,7 +24,7 @@
       class="umn-search__toggle-search-form"
       @click="handleToggleFormClosed"
     >
-      <i class="fa fa-search"></i>
+      <i class="fa" :class="toggleIconClass"></i>
     </button>
   </div>
 </template>
@@ -41,11 +41,8 @@ const handleToggleFormClosed = () => {
   console.log("Toggle Form");
   state.isClosed = !state.isClosed;
 };
-// const handleUpdate = (event) => (state.search = event.target.value);
-const handleSubmit = (event) => {
-  console.log("Submit Form");
-  console.log({ state });
-};
+
+const handleSubmit = (event) => {};
 
 const toggleIconClass = computed(() => ({
   "fa-search": state.isClosed,
