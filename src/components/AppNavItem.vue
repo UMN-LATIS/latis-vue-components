@@ -32,9 +32,9 @@
 }
 
 @media (min-width: 36rem) {
-  /* .app-nav__item:hover { */
-  /* border-bottom: 0.25rem solid white; */
-  /* } */
+  .app-nav__item:hover {
+    border-bottom: 0.25rem solid white;
+  }
   .app-nav__item:hover .app-nav__sub-nav {
     position: absolute;
     top: 100%;

@@ -1,15 +1,19 @@
 <template>
-  <ul class="app-nav__sub-nav">
+  <ul class="app-nav__sub-nav" :class="classMap">
     <slot />
   </ul>
 </template>
 
 <script setup>
-import { defineProps } from "vue";
+import { computed, defineProps } from "vue";
 
 const props = defineProps({
   isOpen: Boolean,
 });
+
+const classMap = computed(() => ({
+  "app-nav__sub-nav--is-open": props.isOpen,
+}));
 </script>
 
 <style>
@@ -17,5 +21,9 @@ const props = defineProps({
   margin: 0;
   padding: 0;
   display: none;
+}
+
+.app-nav__sub-nav--is-open {
+  display: block;
 }
 </style>
