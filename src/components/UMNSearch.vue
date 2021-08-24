@@ -1,70 +1,91 @@
 <template>
   <div class="umn-search">
+    <form
+      class="umn-search__form"
+      :class="searchFormClasses"
+      @submit.prevent="handleSubmit"
+    >
+      <div class="umn-search__input-group">
+        <label for="umn-search__input" class="umn-search__label">
+          <i class="fa fa-search"></i>
+          <span class="visually-hidden">Search</span>
+        </label>
+        <input
+          type="search"
+          class="umn-search__input"
+          id="umn-search__input"
+          :value="state.query"
+          placeholder="Search UMN"
+        />
+      </div>
+      <!-- <button class="umn-search__button" type="submit">Search</button> -->
+    </form>
     <button
       class="umn-search__toggle-search-form"
       @click="handleToggleFormClosed"
     >
-      <i class="fa fa-search"></i>
+      <i class="fa fa-search" :class="toggleIconClass"></i>
     </button>
-    <form class="umn-search__form" :class="searchFormClasses">
-      <label for="umn-search__input" class="visually-hidden">Search</label>
-      <input
-        type="search"
-        id="umn-search__input"
-        value=""
-        placeholder="Search UMN"
-      />
-      <button class="umn-search__button" type="submit">Search</button>
-    </form>
   </div>
 </template>
 
-<script>
+<script setup>
 import { reactive, computed } from "vue";
 
-export default {
-  setup() {
-    const state = reactive({
-      isClosed: false,
-      search: "",
-    });
+const state = reactive({
+  isClosed: false,
+  query: "",
+});
 
-    const handleToggleFormClosed = () => {
-      console.log("Toggle Form");
-      state.isClosed = !state.isClosed;
-    };
-    const handleUpdate = (event) => (state.search = event.target.value);
-    const handleSubmit = (event) => {
-      console.log("Submit Form");
-    };
-
-    const searchFormClasses = computed(() => ({
-      "umn-search__form--is-closed": state.isClosed,
-    }));
-
-    return {
-      state,
-      handleToggleFormClosed,
-      handleUpdate,
-      handleSubmit,
-      searchFormClasses,
-    };
-  },
+const handleToggleFormClosed = () => {
+  console.log("Toggle Form");
+  state.isClosed = !state.isClosed;
 };
+// const handleUpdate = (event) => (state.search = event.target.value);
+const handleSubmit = (event) => {
+  console.log("Submit Form");
+  console.log({ state });
+};
+
+const toggleIconClass = computed(() => ({
+  "fa-search": state.isClosed,
+  "fa-times": !state.isClosed,
+}));
+
+const searchFormClasses = computed(() => ({
+  "umn-search__form--is-closed": state.isClosed,
+}));
 </script>
 
 <style scoped>
-/* .umn-search {
+.umn-search {
   display: flex;
-} */
+  justify-content: flex-end;
+  color: var(--gold);
+}
+.umn-search__input-group {
+  position: relative;
+}
+
+.umn-search__label {
+  position: absolute;
+  left: 0.33em;
+  bottom: 0.5em;
+}
 
 .umn-search__input {
-  border-radius: 0.25rem 0 0 0.25rem;
-  border-right: 0;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  background: none;
+  border: none;
+  border-bottom: 0.125rem solid var(--gold);
+  border-radius: 0;
 }
-.umn-search__button {
-  /* border-left: 0; */
+/* .umn-search__button {
   border-radius: 0 0.25rem 0.25rem 0;
+} */
+.umn-search__form {
+  display: flex;
 }
 
 .umn-search__form--is-closed {
