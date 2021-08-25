@@ -4,7 +4,7 @@
   </a>
 </template>
 <script setup>
-import { computed } from "@vue/reactivity";
+import { computed } from "vue";
 
 const props = defineProps({
   isLoggedIn: {
@@ -18,14 +18,16 @@ const props = defineProps({
 });
 
 const classMap = computed(() => ({
-  "login-button--is-signed-in": props.isSignedIn,
+  "login-button--is-signed-in": props.isLoggedIn,
 }));
 </script>
 <style>
 .login-button {
+  display: inline-block;
   padding: 0.5em 1em;
   background: var(--gold);
-  border: none;
+  /* border: none; */
+  border: 0.125rem solid var(--gold-dark);
   box-shadow: 0;
   border-radius: 0.25rem;
   color: var(--gray-darker);
@@ -34,6 +36,7 @@ const classMap = computed(() => ({
 
 .login-button--is-signed-in {
   background: var(--gray-darker);
-  color: var(--gold);
+  color: var(--white);
+  border-color: var(--black);
 }
 </style>
