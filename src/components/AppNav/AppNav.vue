@@ -36,6 +36,9 @@ function handleToggleMenu() {
   background: var(--gray-lighter);
   color: var(--gray-dark);
 }
+.app-nav .container {
+  padding: 0;
+}
 .app-nav a {
   color: var(--gray-dark);
 }
@@ -48,7 +51,6 @@ function handleToggleMenu() {
 .app-nav__menu-btn {
   border: none;
   padding: 1rem;
-  margin-left: -1rem;
   background: none;
   display: none;
 }

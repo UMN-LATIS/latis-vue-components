@@ -1,4 +1,5 @@
 import AppHeader from "./AppHeader.vue";
+import LoginButton from "./LoginButton.vue";
 
 export default {
   title: "Components/AppHeader",
@@ -22,10 +23,17 @@ Default.args = {
 };
 
 export const WithLogin = (args) => ({
-  components: { AppHeader },
+  components: { AppHeader, LoginButton },
   template: `
     <AppHeader v-bind="args">
-      <LoginButton />
+      <LoginButton :isLoggedIn="args.isLoggedIn" />
     </AppHeader>
   `,
+  setup() {
+    return { args };
+  },
 });
+WithLogin.args = {
+  ...Default.args,
+  isLoggedIn: false,
+};

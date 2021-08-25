@@ -18,12 +18,18 @@ const classMap = computed(() => ({
 
 <style>
 .app-nav__sub-nav {
+  position: relative;
   margin: 0;
   padding: 0;
   display: none;
+  background: #fff;
+  z-index: 10;
 }
 
 .app-nav__sub-nav--is-open {
   display: block;
+}
+.app-nav__sub-nav .app-nav__item:hover {
+  border: 0;
 }
 </style>

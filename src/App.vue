@@ -4,9 +4,9 @@ import "./assets/normalize.css";
 import "./assets/main.css";
 import UMNSearch from "./components/UMNSearch.vue";
 import UMNHeader from "./components/UMNHeader.vue";
-import AppNav from "./components/AppNav.vue";
-import AppNavItem from "./components/AppNavItem.vue";
-import AppNavSubNav from "./components/AppNavSubNav.vue";
+import AppNav from "./components/AppNav/AppNav.vue";
+import AppNavItem from "./components/AppNav/AppNavItem.vue";
+import AppNavSubNav from "./components/AppNav/AppNavSubNav.vue";
 </script>
 
 <style>

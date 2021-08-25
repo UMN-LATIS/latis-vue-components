@@ -35,8 +35,9 @@ const classMap = computed(() => ({
 }
 
 .login-button--is-signed-in {
-  background: var(--gray-darker);
+  /* --button-color: var(--gray-dark); */
+  background: var(--gray-dark);
   color: var(--white);
-  border-color: var(--black);
+  border-color: var(--gray-dark);
 }
 </style>
