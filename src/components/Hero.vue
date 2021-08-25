@@ -1,10 +1,21 @@
 <template>
   <section class="hero">
     <div class="container">
-      <div class="hero__image">
-        <img src="imgSrc" alt="imgAlt" />
-      </div>
-      <div class="hero__text"></div>
+      <slot name="img" class="hero__image" />
+      <slot name="content" class="hero__content" />
     </div>
   </section>
 </template>
+
+<script setup>
+// const props = defineProps({
+//   imgSrc: {
+//     type: String,
+//   },
+//   imgAlt: {
+//     type: String,
+//   },
+// });
+</script>
+
+<style></style>
