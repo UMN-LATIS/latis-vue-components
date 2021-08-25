@@ -3,7 +3,7 @@ import AppNavItem from "./AppNavItem.vue";
 import AppNavSubNav from "./AppNavSubNav.vue";
 
 export default {
-  title: "Components/AppNav/AppNav",
+  title: "Components/AppNav",
   component: AppNav,
   subcomponents: { AppNavItem, AppNavSubNav },
 };
