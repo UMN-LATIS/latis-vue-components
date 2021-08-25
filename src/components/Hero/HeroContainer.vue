@@ -24,4 +24,22 @@
 .hero-img {
   grid-area: img;
 }
+
+@media (max-width: 42rem) {
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+  .hero-img {
+    order: 1;
+    margin: 0 auto 2rem;
+  }
+  .hero-headline {
+    order: 2;
+  }
+  .hero-text {
+    order: 3;
+  }
+}
 </style>

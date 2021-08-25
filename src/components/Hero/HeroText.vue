@@ -14,4 +14,9 @@
   color: var(--maroon);
   text-decoration: underline;
 }
+@media (max-width: 22rem) {
+  .hero-text {
+    font-size: 1rem;
+  }
+}
 </style>

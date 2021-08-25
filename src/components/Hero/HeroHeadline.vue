@@ -8,4 +8,9 @@
 .hero-headline {
   font-size: 2.5rem;
 }
+@media (max-width: 22rem) {
+  .hero-headline {
+    font-size: 1.5rem;
+  }
+}
 </style>
