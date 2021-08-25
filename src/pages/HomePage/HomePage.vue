@@ -31,14 +31,16 @@
 </template>
 
 <script setup>
-import UMNHeader from "../components/UMNHeader.vue";
-import AppHeader from "../components/AppHeader.vue";
-import { AppNav, AppNavItem, AppNavSubNav } from "../components/AppNav";
-import LoginButton from "../components/LoginButton.vue";
 import {
+  UMNHeader,
+  AppHeader,
+  AppNav,
+  AppNavItem,
+  AppNavSubNav,
+  LoginButton,
   HeroContainer,
   HeroHeadline,
   HeroText,
   HeroImg,
-} from "../components/Hero";
+} from "../../index.js";
 </script>

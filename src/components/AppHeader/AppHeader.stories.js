@@ -1,5 +1,5 @@
 import AppHeader from "./AppHeader.vue";
-import LoginButton from "./LoginButton.vue";
+import { LoginButton } from "../LoginButton";
 
 export default {
   title: "Components/AppHeader",

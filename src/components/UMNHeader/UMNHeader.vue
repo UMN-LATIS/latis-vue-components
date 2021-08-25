@@ -1,7 +1,7 @@
 <script setup>
-import UMNSearch from "./UMNSearch.vue";
-import umnWordmark from "../assets/umn-tc-d2d.svg";
-import mLogo from "../assets/m-logo.svg";
+import { UMNSearch } from "../../index.js";
+import umnWordmark from "../../assets/umn-tc-d2d.svg";
+import mLogo from "../../assets/m-logo.svg";
 </script>
 
 <style>
