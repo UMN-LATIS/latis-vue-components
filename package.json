@@ -19,7 +19,8 @@
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook",
     "build": "rm -rf dist && rollup -c",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "release": "release-it"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -35,6 +36,7 @@
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^7.16.0",
     "postcss": "^8.3.6",
+    "release-it": "^14.11.5",
     "rollup": "^2.56.3",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
