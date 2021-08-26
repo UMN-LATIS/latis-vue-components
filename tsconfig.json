@@ -23,8 +23,7 @@
     "node_modules",
     "dist",
     "assets",
-    "*.stories.js",
     ".storybook",
-    "storybook-examples"
+    "src/**/*.stories.js"
   ]
 }

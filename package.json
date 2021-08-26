@@ -8,10 +8,10 @@
     "dev": "npm run storybook",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook",
-    "build": "rollup -c"
+    "build": "rm -rf dist && rollup -c"
   },
-  "dependencies": {
-    "vue": "^3.0.5"
+  "peerDependencies": {
+    "vue": "~3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
