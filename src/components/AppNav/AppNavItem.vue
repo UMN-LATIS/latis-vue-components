@@ -49,8 +49,6 @@
 </style>
 
 <script setup>
-import { defineProps } from "vue";
-
 const classMap = {
   "app-nav__item--is-active": props.isActive || false,
 };

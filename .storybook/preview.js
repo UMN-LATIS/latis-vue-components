@@ -1,5 +1,3 @@
-// import { FontAwesomeIcon } from "../src/plugins/font-awesome";
-import "../src/assets/fontawesome-5/css/all.min.css";
 import "../src/assets/normalize.css";
 import "../src/assets/main.css";
 

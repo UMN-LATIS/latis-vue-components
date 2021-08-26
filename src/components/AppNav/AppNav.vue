@@ -2,7 +2,7 @@
   <nav class="app-nav" :class="classMap">
     <div class="container">
       <button class="app-nav__menu-btn" @click="handleToggleMenu">
-        <i class="fa fa-bars"></i> Menu
+        <Icon name="bars" /> Menu
       </button>
       <ul class="app-nav__nav-list">
         <slot />
@@ -13,6 +13,7 @@
 
 <script setup>
 import { computed, reactive } from "vue";
+import { Icon } from "../Icon/index.js";
 
 const state = reactive({
   isOpen: false,
