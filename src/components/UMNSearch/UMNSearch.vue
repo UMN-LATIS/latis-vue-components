@@ -7,7 +7,7 @@
     >
       <div class="umn-search__input-group">
         <label for="umn-search__input" class="umn-search__label">
-          <i class="fa fa-search"></i>
+          <Icon name="search" />
           <span class="visually-hidden">Search</span>
         </label>
         <input
@@ -24,13 +24,14 @@
       class="umn-search__toggle-search-form"
       @click="handleToggleFormClosed"
     >
-      <i class="fa" :class="toggleIconClass"></i>
+      <Icon :name="toggleIconName" />
     </button>
   </div>
 </template>
 
 <script setup>
 import { reactive, computed } from "vue";
+import { Icon } from "../Icon/index.js";
 
 const state = reactive({
   isClosed: true,
@@ -38,17 +39,12 @@ const state = reactive({
 });
 
 const handleToggleFormClosed = () => {
-  console.log("Toggle Form");
   state.isClosed = !state.isClosed;
 };
 
 const handleSubmit = (event) => {};
 
-const toggleIconClass = computed(() => ({
-  "fa-search": state.isClosed,
-  "fa-times": !state.isClosed,
-}));
-
+const toggleIconName = computed(() => (state.isClosed ? "search" : "times"));
 const searchFormClasses = computed(() => ({
   "umn-search__form--is-closed": state.isClosed,
 }));

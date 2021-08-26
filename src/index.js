@@ -1,7 +1,17 @@
 // global stylesheets
 import "./assets/normalize.css";
-import "./assets/fontawesome-5/css/all.min.css";
 import "./assets/main.css";
+
+// Vue FontAwesome
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faSearch,
+  faBars,
+  faTimes,
+  faChevronDown,
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faSearch, faBars, faTimes, faChevronDown);
 
 import { AppHeader } from "./components/AppHeader/index.js";
 import { AppNav, AppNavItem, AppNavSubNav } from "./components/AppNav/index.js";

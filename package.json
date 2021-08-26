@@ -10,9 +10,6 @@
     "build-storybook": "build-storybook",
     "build": "rm -rf dist && rollup -c"
   },
-  "peerDependencies": {
-    "vue": "~3.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@rollup/plugin-commonjs": "^20.0.0",
@@ -28,10 +25,19 @@
     "eslint-plugin-vue": "^7.16.0",
     "postcss": "^8.3.6",
     "rollup": "^2.56.3",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.1",
     "rollup-plugin-typescript2": "^0.30.0",
     "rollup-plugin-vue": "^6.0.0",
     "vue-loader": "^16.5.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-regular-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/vue-fontawesome": "^3.0.0-4",
+    "vue": "^3.2.6"
   }
 }

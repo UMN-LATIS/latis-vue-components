@@ -26,12 +26,12 @@ const classMap = computed(() => ({
   display: inline-block;
   padding: 0.5em 1em;
   background: var(--gold);
-  /* border: none; */
   border: 0.125rem solid var(--gold-dark);
   box-shadow: 0;
   border-radius: 0.25rem;
   color: var(--gray-darker);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .login-button--is-signed-in {

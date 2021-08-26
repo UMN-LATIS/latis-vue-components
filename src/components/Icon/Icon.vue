@@ -1,20 +1,13 @@
 <template>
-  <i class="fa" :class="faIconName"></i>
+  <FontAwesomeIcon :icon="name" />
 </template>
 
 <script setup>
-// import "../../assets/fontawesome-5/css/all.min.css";
-import { computed } from "vue";
-
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 const props = defineProps({
   name: {
     type: String,
     required: true,
   },
 });
-
-const faIconName = computed(() => `fa-${props.name}`);
 </script>
-<style>
-@import url("../../assets/fontawesome-5/css/all.min.css");
-</style>

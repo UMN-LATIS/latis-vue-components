@@ -42,6 +42,7 @@ function handleToggleMenu() {
 }
 .app-nav a {
   color: var(--gray-dark);
+  text-decoration: none;
 }
 .app-nav__nav-list {
   margin: 0;
