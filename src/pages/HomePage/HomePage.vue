@@ -25,7 +25,7 @@
         </p>
         <button>Sign In</button>
       </HeroText>
-      <HeroImg src="/img/z-hero-illustration.svg" alt="Placeholder" />
+      <HeroImg src="./img/z-hero-illustration.svg" alt="Placeholder" />
     </HeroContainer>
   </div>
 </template>

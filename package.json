@@ -17,10 +17,14 @@
   "scripts": {
     "dev": "npm run storybook",
     "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "rm -rf dist-storybook && build-storybook -o dist-storybook -s public",
     "build": "rm -rf dist && rollup -c",
     "prepublishOnly": "npm run build",
-    "release": "release-it"
+    "release": "release-it",
+    "gh-pages:build": "npm run build-storybook && touch dist-storybook/.nojekyll",
+    "gh-pages:serve": "npx serve dist-storybook",
+    "gh-pages:publish": "gh-pages --dotfiles --dist dist-storybook",
+    "gh-pages": "npm run gh-pages:build && npm run gh-pages:publish"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -35,6 +39,7 @@
     "babel-loader": "^8.2.2",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^7.16.0",
+    "gh-pages": "^3.2.3",
     "postcss": "^8.3.6",
     "release-it": "^14.11.5",
     "rollup": "^2.56.3",
