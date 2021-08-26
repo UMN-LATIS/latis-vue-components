@@ -1,14 +1,14 @@
-import { AppHeader } from "./components/AppHeader";
-import { AppNav, AppNavItem, AppNavSubNav } from "./components/AppNav";
-import { LoginButton } from "./components/LoginButton";
-import { UMNHeader } from "./components/UMNHeader";
+import { AppHeader } from "./components/AppHeader/index.js";
+import { AppNav, AppNavItem, AppNavSubNav } from "./components/AppNav/index.js";
+import { LoginButton } from "./components/LoginButton/index.js";
+import { UMNHeader } from "./components/UMNHeader/index.js";
 import {
   HeroContainer,
   HeroHeadline,
   HeroImg,
   HeroText,
-} from "./components/Hero";
-import { UMNSearch } from "./components/UMNSearch";
+} from "./components/Hero/index.js";
+import { UMNSearch } from "./components/UMNSearch/index.js";
 
 export {
   AppHeader,
