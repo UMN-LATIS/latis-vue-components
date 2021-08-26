@@ -1,4 +1,4 @@
-# LATIS Vue Storybook
+# LATIS Vue Components
 
 > An collection of Vue components for LATIS projects
 >
