@@ -1,5 +1,36 @@
+<template>
+  <header class="umn-header">
+    <div class="container">
+      <h1 class="umn-header__wordmark">
+        <img
+          class="umn-wordmark-large"
+          :src="umnWordmark"
+          alt="University of Minnesota: Driven to Discover"
+        />
+        <img
+          class="umn-wordmark-small"
+          :src="mLogo"
+          alt="University of Minnesota Wordmark"
+        />
+      </h1>
+      <aside class="umn-header__utils">
+        <ul class="umn-header__links">
+          <li>
+            <a href="https://myu.umn.edu"><Icon name="lock" /> MyU</a>
+          </li>
+          <li>
+            <a href="https://onestop.umn.edu">One Stop</a>
+          </li>
+        </ul>
+        <UMNSearch class="umn-header__search" />
+      </aside>
+    </div>
+  </header>
+</template>
+
 <script setup>
 import { UMNSearch } from "../UMNSearch/index";
+import { Icon } from "../Icon/index";
 import umnWordmark from "../../assets/umn-tc-d2d.svg";
 import mLogo from "../../assets/m-logo.svg";
 </script>
@@ -8,6 +39,10 @@ import mLogo from "../../assets/m-logo.svg";
 .umn-header {
   background: var(--maroon);
   padding: 1rem 0;
+}
+
+.umn-header a {
+  text-decoration: none;
 }
 
 .umn-header > .container {
@@ -23,14 +58,13 @@ import mLogo from "../../assets/m-logo.svg";
 
 .umn-header__wordmark img {
   height: 2rem;
-  /* object-fit: contain; */
 }
 
 .umn-header__links {
-  font-size: 0.8rem;
+  display: none;
+  font-size: 1rem;
   list-style: none;
   color: white;
-  display: flex;
   margin: 0;
   padding: 0;
   margin-right: 1rem;
@@ -45,6 +79,7 @@ import mLogo from "../../assets/m-logo.svg";
   padding: 0.5rem;
   color: hsla(0, 100%, 100%, 0.75);
   display: inline-block;
+  font-size: 0.8rem;
 }
 
 .umn-header__links a {
@@ -56,33 +91,26 @@ import mLogo from "../../assets/m-logo.svg";
   align-items: center;
 }
 
-@media (max-width: 42rem) {
+.umn-wordmark-large {
+  display: none;
+}
+
+@media (min-width: 30rem) {
   .umn-header__links {
+    display: flex;
+  }
+}
+
+/* <picture> and svg srcset not playing nice with rollup so trying this */
+@media (min-width: 36rem) {
+  .umn-header__wordmark img {
+    height: 2.25rem;
+  }
+  .umn-wordmark-large {
+    display: block;
+  }
+  .umn-wordmark-small {
     display: none;
   }
 }
 </style>
-
-<template>
-  <header class="umn-header">
-    <div class="container">
-      <h1 class="umn-header__wordmark">
-        <picture>
-          <source :srcset="umnWordmark" media="(min-width: 36rem)" />
-          <img :src="mLogo" alt="University of Minnesota Wordmark" />
-        </picture>
-      </h1>
-      <aside class="umn-header__utils">
-        <ul class="umn-header__links">
-          <li>
-            <a href="https://myu.umn.edu"><i class="fa fa-lock"></i> MyU</a>
-          </li>
-          <li>
-            <a href="https://onestop.umn.edu">One Stop</a>
-          </li>
-        </ul>
-        <UMNSearch class="umn-header__search" />
-      </aside>
-    </div>
-  </header>
-</template>

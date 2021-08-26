@@ -31,6 +31,8 @@ export default [
       commonjs(),
       typescript({ useTsconfigDeclarationDir: true }),
       postcss({
+        minimize: true,
+        sourceMap: true,
         extensions: [".css"],
       }),
     ],

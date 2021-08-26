@@ -50,12 +50,12 @@ const searchFormClasses = computed(() => ({
 }));
 </script>
 
-<style scoped>
+<style>
 .umn-search {
   display: flex;
   justify-content: flex-end;
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .umn-search__input-group {
   position: relative;
