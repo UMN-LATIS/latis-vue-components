@@ -1,5 +1,5 @@
 <script setup>
-import { UMNSearch } from "../../index.js";
+import { UMNSearch } from "../UMNSearch/index";
 import umnWordmark from "../../assets/umn-tc-d2d.svg";
 import mLogo from "../../assets/m-logo.svg";
 </script>
