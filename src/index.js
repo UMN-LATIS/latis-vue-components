@@ -9,9 +9,10 @@ import {
   faBars,
   faTimes,
   faChevronDown,
+  faLock,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faSearch, faBars, faTimes, faChevronDown);
+library.add(faSearch, faBars, faTimes, faChevronDown, faLock);
 
 import { AppHeader } from "./components/AppHeader/index.js";
 import { AppNav, AppNavItem, AppNavSubNav } from "./components/AppNav/index.js";
