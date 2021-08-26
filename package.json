@@ -1,14 +1,25 @@
 {
-  "name": "latis-vue-components",
-  "version": "0.0.0",
+  "name": "@umn-latis/latis-vue-components",
+  "description": "A collection vue components for latis projects. Very incomplete and experimental.",
+  "version": "0.0.1",
+  "repository": "UMN-LATIS/latis-vue-components",
+  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "name": "James Johnson",
+    "email": "johnsojr@umn.edu"
+  },
   "scripts": {
     "dev": "npm run storybook",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook",
-    "build": "rm -rf dist && rollup -c"
+    "build": "rm -rf dist && rollup -c",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
