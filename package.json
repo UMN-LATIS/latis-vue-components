@@ -54,5 +54,8 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/vue-fontawesome": "^3.0.0-4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
