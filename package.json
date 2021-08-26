@@ -1,7 +1,7 @@
 {
   "name": "@umn-latis/latis-vue-components",
   "description": "A collection vue components for latis projects. Very incomplete and experimental.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "repository": "UMN-LATIS/latis-vue-components",
   "license": "MIT",
   "main": "dist/index.js",
