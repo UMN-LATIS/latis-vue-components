@@ -3,16 +3,16 @@
     <Container>
       <h1 class="umn-header__wordmark">
         <a href="https://www.umn.edu">
-        <img
-          class="umn-wordmark-large"
-          :src="umnWordmark"
-          alt="University of Minnesota: Driven to Discover"
-        />
-        <img
-          class="umn-wordmark-small"
-          :src="mLogo"
-          alt="University of Minnesota Wordmark"
-        />
+          <img
+            class="umn-wordmark-large"
+            :src="umnWordmark"
+            alt="University of Minnesota: Driven to Discover"
+          />
+          <img
+            class="umn-wordmark-small"
+            :src="mLogo"
+            alt="University of Minnesota Wordmark"
+          />
         </a>
       </h1>
       <aside class="umn-header__utils">
@@ -48,7 +48,7 @@ import mLogo from "../../assets/m-logo.svg";
   text-decoration: none;
 }
 
-.umn-header  :deep(.latis-vue-container) {
+.umn-header :deep(.latis-vue-container) {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,14 +98,14 @@ import mLogo from "../../assets/m-logo.svg";
   display: none;
 }
 
-@media (min-width: 30rem) {
+@media (min-width: 32rem) {
   .umn-header__links {
     display: flex;
   }
 }
 
 /* <picture> and svg srcset not playing nice with rollup so trying this */
-@media (min-width: 36rem) {
+@media (min-width: 42rem) {
   .umn-header__wordmark img {
     height: 2.25rem;
   }

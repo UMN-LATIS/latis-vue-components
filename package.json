@@ -17,11 +17,11 @@
   "scripts": {
     "dev": "npm run storybook",
     "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "rm -rf dist-storybook && build-storybook -o dist-storybook -s public",
+    "storybook:build": "rm -rf dist-storybook && build-storybook -o dist-storybook -s public",
     "build": "rm -rf dist && rollup -c",
     "prepublishOnly": "npm run build",
     "release": "release-it",
-    "gh-pages:build": "npm run build-storybook && touch dist-storybook/.nojekyll",
+    "gh-pages:build": "npm run storybook:build && touch dist-storybook/.nojekyll",
     "gh-pages:serve": "npx serve dist-storybook",
     "gh-pages:publish": "gh-pages --dotfiles --dist dist-storybook",
     "gh-pages": "npm run gh-pages:build && npm run gh-pages:publish",
