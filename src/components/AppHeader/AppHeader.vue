@@ -35,7 +35,7 @@ const props = defineProps({
   color: var(--gray-darker);
   padding: 0.5rem 0;
 }
-.app-header .container {
+.app-header :deep(.latis-vue-container) {
   display: flex;
   justify-content: space-between;
   align-items: center;

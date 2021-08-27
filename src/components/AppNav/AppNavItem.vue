@@ -19,16 +19,17 @@
   color: var(--gray-dark);
   text-decoration: none;
 }
-.app-nav__item a:hover {
-  background: white;
+.app-nav__item a:hover,
+.app-nav__item a:focus {
   color: var(--maroon);
 }
 
-.app-nav__item:hover :deep(.app-nav__sub-nav) {
+.app-nav__item:hover :deep(.app-nav__sub-nav),
+.app-nav__item:focus-within :deep(.app-nav__sub-nav) {
   display: block;
 }
 
-@media (min-width: 36rem) {
+@media (min-width: 36rem) { 
   .app-nav__item:hover :deep(.app-nav__sub-nav) {
     position: absolute;
     top: 100%;
@@ -54,4 +55,4 @@ const props = defineProps({
   href: String,
   isActive: Boolean,
 });
-</script>
+</script> 

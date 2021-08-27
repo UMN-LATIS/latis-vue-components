@@ -38,7 +38,7 @@ function handleToggleMenu() {
   background: var(--gray-lighter);
   color: var(--gray-dark);
 }
-.app-nav :deep(.container) {
+.app-nav :deep(.latis-vue-container) {
   padding: 0;
 }
 .app-nav a {

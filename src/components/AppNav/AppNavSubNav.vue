@@ -16,7 +16,7 @@ const classMap = computed(() => ({
 }));
 </script>
 
-<style>
+<style scoped>
 .app-nav__sub-nav {
   position: relative;
   margin: 0;
@@ -33,7 +33,7 @@ const classMap = computed(() => ({
 .app-nav__sub-nav--is-open {
   display: block;
 }
-.app-nav__sub-nav .app-nav__item:hover {
+.app-nav__sub-nav :deep(.app-nav__item:hover) {
   border: 0;
 }
 </style>

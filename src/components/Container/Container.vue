@@ -1,11 +1,11 @@
 <template>
-  <div class="container">
+  <div class="latis-vue-container">
     <slot />
   </div>
 </template>
 
 <style scoped>
-.container {
+.latis-vue-container {
   max-width: 60rem;
   margin: auto;
   padding: 0 1rem;

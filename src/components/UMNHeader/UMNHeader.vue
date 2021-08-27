@@ -48,7 +48,7 @@ import mLogo from "../../assets/m-logo.svg";
   text-decoration: none;
 }
 
-.umn-header > .container {
+.umn-header  :deep(.latis-vue-container) {
   display: flex;
   justify-content: space-between;
   align-items: center;
