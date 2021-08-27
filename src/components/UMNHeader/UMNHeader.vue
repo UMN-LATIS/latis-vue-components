@@ -2,6 +2,7 @@
   <header class="umn-header">
     <Container>
       <h1 class="umn-header__wordmark">
+        <a href="https://www.umn.edu">
         <img
           class="umn-wordmark-large"
           :src="umnWordmark"
@@ -12,6 +13,7 @@
           :src="mLogo"
           alt="University of Minnesota Wordmark"
         />
+        </a>
       </h1>
       <aside class="umn-header__utils">
         <ul class="umn-header__links">
