@@ -50,7 +50,7 @@ const searchFormClasses = computed(() => ({
 }));
 </script>
 
-<style>
+<style scoped>
 .umn-search {
   display: flex;
   justify-content: flex-end;

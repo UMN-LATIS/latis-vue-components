@@ -4,8 +4,9 @@
   </h2>
 </template>
 
-<style>
+<style scoped>
 .hero-headline {
+  margin: 1rem 0;
   font-size: 2.5rem;
 }
 @media (max-width: 22rem) {

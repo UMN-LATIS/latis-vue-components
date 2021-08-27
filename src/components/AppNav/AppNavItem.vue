@@ -6,7 +6,7 @@
   </li>
 </template>
 
-<style>
+<style scoped>
 .app-nav__item {
   padding: 0;
   margin: 0;
@@ -17,25 +17,22 @@
   display: block;
   padding: 1rem;
   color: var(--gray-dark);
+  text-decoration: none;
 }
 .app-nav__item a:hover {
   background: white;
   color: var(--maroon);
 }
 
-.app-nav__item:hover .app-nav__sub-nav {
+.app-nav__item:hover :deep(.app-nav__sub-nav) {
   display: block;
 }
 
-.app-nav__sub-nav a:hover {
-  border: none;
-}
-
 @media (min-width: 36rem) {
-  .app-nav__item:hover .app-nav__sub-nav {
+  .app-nav__item:hover :deep(.app-nav__sub-nav) {
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     display: block;
     border: 1px solid var(--gray-light);
     border-radius: 0.25rem;

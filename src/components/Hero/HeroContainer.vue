@@ -1,10 +1,14 @@
 <template>
-  <section class="hero-container container">
+  <Container class="hero-container">
     <slot />
-  </section>
+  </Container>
 </template>
 
-<style>
+<script setup>
+import { Container } from "../Container";
+</script>
+
+<style scoped>
 .hero-container {
   padding: 4rem 1rem;
   display: grid;
@@ -15,13 +19,13 @@
     "headline img"
     "text  img";
 }
-.hero-headline {
+.hero-container :deep(.hero-headline) {
   grid-area: headline;
 }
-.hero-text {
+.hero-container :deep(.hero-text) {
   grid-area: text;
 }
-.hero-img {
+.hero-container :deep(.hero-img) {
   grid-area: img;
 }
 
@@ -31,14 +35,14 @@
     flex-direction: column;
     padding: 2rem 1rem;
   }
-  .hero-img {
+  :deep(.hero-img) {
     order: 1;
     margin: 0 auto 2rem;
   }
-  .hero-headline {
+  :deep(.hero-headline) {
     order: 2;
   }
-  .hero-text {
+  :deep(.hero-text) {
     order: 3;
   }
 }

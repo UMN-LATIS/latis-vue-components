@@ -21,7 +21,7 @@ const classMap = computed(() => ({
   "login-button--is-signed-in": props.isLoggedIn,
 }));
 </script>
-<style>
+<style scoped>
 .login-button {
   display: inline-block;
   padding: 0.5em 1em;
@@ -35,7 +35,6 @@ const classMap = computed(() => ({
 }
 
 .login-button--is-signed-in {
-  /* --button-color: var(--gray-dark); */
   background: var(--gray-dark);
   color: var(--white);
   border-color: var(--gray-dark);

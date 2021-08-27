@@ -1,19 +1,20 @@
 <template>
   <nav class="app-nav" :class="classMap">
-    <div class="container">
+    <Container>
       <button class="app-nav__menu-btn" @click="handleToggleMenu">
         <Icon name="bars" /> Menu
       </button>
       <ul class="app-nav__nav-list">
         <slot />
       </ul>
-    </div>
+    </Container>
   </nav>
 </template>
 
 <script setup>
 import { computed, reactive } from "vue";
 import { Icon } from "../Icon/index.js";
+import { Container } from "../Container/index";
 
 const state = reactive({
   isOpen: false,
@@ -29,7 +30,7 @@ function handleToggleMenu() {
 }
 </script>
 
-<style>
+<style scoped>
 .app-nav {
   padding: 0;
   margin: 0;
@@ -37,7 +38,7 @@ function handleToggleMenu() {
   background: var(--gray-lighter);
   color: var(--gray-dark);
 }
-.app-nav .container {
+.app-nav :deep(.container) {
   padding: 0;
 }
 .app-nav a {
@@ -76,14 +77,14 @@ function handleToggleMenu() {
     flex-direction: column;
     margin-top: 1rem;
   }
-  .app-nav--is-open .app-nav__item a {
+  .app-nav--is-open :deep(.app-nav__item) a {
     padding: 0.5rem;
   }
-  .app-nav--is-open .app-nav__item--is-active a {
+  .app-nav--is-open :deep(.app-nav__item--is-active) a {
     border: none;
     border-left: 0.25rem solid var(--maroon);
   }
-  .app-nav--is-open .app-nav__sub-nav {
+  .app-nav--is-open :deep(.app-nav__sub-nav) {
     position: static;
   }
 }

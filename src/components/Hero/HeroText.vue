@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .hero-text {
   font-size: 1.25rem;
   color: #999;

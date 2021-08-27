@@ -1,6 +1,6 @@
 <template>
   <header class="app-header">
-    <div class="container">
+    <Container>
       <div class="app-header__branding">
         <h1 class="app-header__name">{{ name }}</h1>
         <p class="app-header__description">
@@ -8,11 +8,28 @@
         </p>
       </div>
       <slot class="app-header__slot"></slot>
-    </div>
+    </Container>
   </header>
 </template>
 
-<style>
+<script setup>
+import { Container } from "../Container/index";
+const props = defineProps({
+  name: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+  },
+  href: {
+    type: String,
+    default: "/",
+  },
+});
+</script>
+
+<style scoped>
 .app-header {
   background: var(--white);
   color: var(--gray-darker);
@@ -39,19 +56,3 @@
   color: var(--gray-dark);
 }
 </style>
-
-<script setup>
-const props = defineProps({
-  name: {
-    type: String,
-    required: true,
-  },
-  description: {
-    type: String,
-  },
-  href: {
-    type: String,
-    default: "/",
-  },
-});
-</script>

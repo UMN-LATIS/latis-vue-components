@@ -26,6 +26,10 @@ const classMap = computed(() => ({
   z-index: 10;
 }
 
+.app-nav__sub-nav a:hover {
+  border: none;
+}
+
 .app-nav__sub-nav--is-open {
   display: block;
 }

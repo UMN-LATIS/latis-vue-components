@@ -1,6 +1,6 @@
 <template>
   <header class="umn-header">
-    <div class="container">
+    <Container>
       <h1 class="umn-header__wordmark">
         <img
           class="umn-wordmark-large"
@@ -24,18 +24,19 @@
         </ul>
         <UMNSearch class="umn-header__search" />
       </aside>
-    </div>
+    </Container>
   </header>
 </template>
 
 <script setup>
 import { UMNSearch } from "../UMNSearch/index";
 import { Icon } from "../Icon/index";
+import { Container } from "../Container/index";
 import umnWordmark from "../../assets/umn-tc-d2d.svg";
 import mLogo from "../../assets/m-logo.svg";
 </script>
 
-<style>
+<style scoped>
 .umn-header {
   background: var(--maroon);
   padding: 1rem 0;
