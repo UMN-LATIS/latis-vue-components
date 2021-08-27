@@ -16,3 +16,11 @@ const props = defineProps({
   },
 });
 </script>
+
+<style scoped>
+  .hero-img img {
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+</style>

@@ -12,7 +12,7 @@ import { Container } from "../Container";
 .hero-container {
   padding: 4rem 1rem;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: max-content;
   column-gap: 1rem;
   grid-template-areas:
@@ -27,6 +27,12 @@ import { Container } from "../Container";
 }
 .hero-container :deep(.hero-img) {
   grid-area: img;
+}
+
+@media (max-width: 50rem) {
+  .hero-container {
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
 @media (max-width: 42rem) {
