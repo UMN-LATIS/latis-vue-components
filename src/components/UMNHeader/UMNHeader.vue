@@ -18,7 +18,7 @@
       <aside class="umn-header__utils">
         <ul class="umn-header__links">
           <li>
-            <a href="https://myu.umn.edu"><Icon name="lock" /> MyU</a>
+            <a href="https://myu.umn.edu">MyU <Icon name="lock" /></a>
           </li>
           <li>
             <a href="https://onestop.umn.edu">One Stop</a>
