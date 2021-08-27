@@ -3,7 +3,7 @@
     <form
       class="umn-search__form"
       :class="searchFormClasses"
-      @submit.prevent="handleSubmit"
+      action="https://usearch.umn.edu"
     >
       <div class="umn-search__input-group">
         <label for="umn-search__input" class="umn-search__label">
@@ -13,12 +13,12 @@
         <input
           type="search"
           class="umn-search__input"
+          name="query"
           id="umn-search__input"
-          :value="state.query"
+          v-model="state.query"
           placeholder="Search UMN"
         />
       </div>
-      <!-- <button class="umn-search__button" type="submit">Search</button> -->
     </form>
     <button
       class="umn-search__toggle-search-form"
@@ -41,8 +41,6 @@ const state = reactive({
 const handleToggleFormClosed = () => {
   state.isClosed = !state.isClosed;
 };
-
-const handleSubmit = (event) => {};
 
 const toggleIconName = computed(() => (state.isClosed ? "search" : "times"));
 const searchFormClasses = computed(() => ({
@@ -87,13 +85,14 @@ const searchFormClasses = computed(() => ({
   background: none;
   border: none;
   border-bottom: 0.125rem solid white;
-  border-radius: 0;
   color: white;
   max-width: 100%;
+
+  /* remove rounded borders on iOS */
+  border-radius: 0;
+  -webkit-appearance: none;
 }
-/* .umn-search__button {
-  border-radius: 0 0.25rem 0.25rem 0;
-} */
+
 .umn-search__form {
   display: flex;
 }
