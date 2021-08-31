@@ -4,6 +4,7 @@
       class="umn-search__form"
       :class="searchFormClasses"
       action="https://usearch.umn.edu"
+      data-test="umn-search__form"
     >
       <div class="umn-search__input-group">
         <label for="umn-search__input" class="umn-search__label">
@@ -12,6 +13,7 @@
         </label>
         <input
           type="search"
+          data-test="umn-search__input"
           class="umn-search__input"
           name="query"
           id="umn-search__input"
@@ -21,6 +23,7 @@
       </div>
     </form>
     <button
+      data-test="umn-search__toggle-button"
       class="umn-search__toggle-search-form"
       @click="handleToggleFormClosed"
     >
